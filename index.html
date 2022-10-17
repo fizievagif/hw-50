@@ -9,12 +9,34 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="root"></div>
 
 <script type="text/babel">
+    const MoviePostCard = props => {
+        return (
+            <div className="card">
+                <div>
+                    <img src={props.image} alt={props.name} className="image"/>
+                </div>
+                <h4>{props.name}</h4>
+                <p className="year">Год выпуска: {props.year}</p>
+            </div>
+        );
+    };
 
+    const movie = (
+        <div className="cards">
+            <MoviePostCard image="https://upload.wikimedia.org/wikipedia/ru/thumb/8/8a/Fight_club.jpg/239px-Fight_club.jpg" name="Бойцовский клуб" year={1999}/>
+            <MoviePostCard image="https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/eb8846ef-7a7b-424d-afbb-ba8a161bb370/600x900" name="Щегол" year={2019}/>
+            <MoviePostCard image="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/3b4b90e6-0b62-410c-a583-6977df318fbe/300x450" name="Гарри Поттер и Принц-полукровка" year={2009}/>
+        </div>
+    );
+
+    const container = document.getElementById('root');
+    ReactDOM.createRoot(container).render(movie);
 </script>
 </body>
 </html>
