@@ -21,6 +21,7 @@
                 <div className="container">
                     <h2>Header</h2>
                 </div>
+
                 <nav className="main-nav">
                     <div className="container">
                         <a href="#">Студия</a>
@@ -37,6 +38,7 @@
         return (
             <div className="side-bar">
                 <h2>Side Bar</h2>
+
                 <ul className="side-bar-link">
                     <li><a href="#">1. Пункт</a></li>
                     <li><a href="#">2. Пункт</a></li>
@@ -61,12 +63,15 @@
                         </div>
                     </div>
                 </div>
+
                 <div className="container sections-container">
                     <div className="section">
                         <h4>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h4>
-                        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива.
+                        <p>Исповедуем принципы минимализма и чистоты.
+                            Ставим математический расчет превыше креатива.
                             Работаем не покладая рук, как роботы.</p>
                         <p className="text-header">Выполняем заказы на разработку:</p>
+
                         <ul className="list-hdr">
                             <li className="list">Веб-сайтов любой сложности</li>
                             <li className="list">Мобильных приложений для iOS и Android</li>
@@ -94,10 +99,12 @@
     const site = (
         <div className="container-main">
             <Header />
+
             <div className="content">
                 <SideBar />
                 <MainContent />
             </div>
+
             <Footer />
         </div>
     );
