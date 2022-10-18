@@ -15,7 +15,95 @@
 <div id="root"></div>
 
 <script type="text/babel">
+    const Header = () => {
+        return (
+            <header className="header">
+                <div className="container">
+                    <h2>Header</h2>
+                </div>
+                <nav className="main-nav">
+                    <div className="container">
+                        <a href="#">Студия</a>
+                        <a href="#">Клиенты</a>
+                        <a href="#">Магазин</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                </nav>
+            </header>
+        );
+    };
 
+    const SideBar = () => {
+        return (
+            <div className="side-bar">
+                <h2>Side Bar</h2>
+                <ul className="side-bar-link">
+                    <li><a href="#">1. Пункт</a></li>
+                    <li><a href="#">2. Пункт</a></li>
+                    <li><a href="#">3. Пункт</a></li>
+                    <li><a href="#">4. Пункт</a></li>
+                    <li><a href="#">5. Пункт</a></li>
+                    <li><a href="#">6. Пункт</a></li>
+                </ul>
+            </div>
+        );
+    };
+
+    const MainContent = () => {
+        return (
+            <div className="sections">
+                <div className="main-block">
+                    <div className="container main-block-container">
+                        <div className="main-block-info">
+                            <h1 className="main-title">Дизайн-студия из Краснодара</h1>
+                            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+                            <a href="#" className="btn">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="container sections-container">
+                    <div className="section">
+                        <h4>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h4>
+                        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива.
+                            Работаем не покладая рук, как роботы.</p>
+                        <p className="text-header">Выполняем заказы на разработку:</p>
+                        <ul className="list-hdr">
+                            <li className="list">Веб-сайтов любой сложности</li>
+                            <li className="list">Мобильных приложений для iOS и Android</li>
+                            <li className="list">Слайдшоу и видео для корпоративных презентаций</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    const Footer = () => {
+        return (
+            <footer>
+                <div className="container">
+                    <div className="footer-text">
+                        <h5>Давайте дружить, это выгодно!</h5>
+                        <p>Скидка 10% для друзей из социальных сетей.</p>
+                    </div>
+                </div>
+            </footer>
+        );
+    };
+
+    const site = (
+        <div className="container-main">
+            <Header />
+            <div className="content">
+                <SideBar />
+                <MainContent />
+            </div>
+            <Footer />
+        </div>
+    );
+
+    const root = document.getElementById('root');
+    ReactDOM.createRoot(root).render(site);
 </script>
 </body>
 </html>
